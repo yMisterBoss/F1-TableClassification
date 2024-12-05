@@ -1,0 +1,246 @@
+/* Estilos Globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Cards de classificação */
+.standings, .races {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.driver-card, .race-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendário de corridas */
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.race-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.race-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.race-card a.disabled {
+  color: #aaa;
+  pointer-events: none;
+  font-style: italic;
+}
+
+.race-card a:hover {
+  text-decoration: underline;
+}
+
+/* Detalhes da corrida */
+.details-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item span {
+  font-weight: bold;
+}
+
+.details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.race-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.race-date, .race-location {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.results-list {
+  margin-top: 20px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.position {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.driver {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.points {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.loading, .error-message {
+  text-align: center;
+  color: #666;
+  margin: 20px 0;
+}
+
+.error-message {
+  color: #ff0000;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-card .position {
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.team-card .team-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-card .team-name {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.team-card .team-points {
+  font-weight: bold;
+  color: #333;
+}
+
+.no-logo {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 15px;
+  color: #fff;
+}
