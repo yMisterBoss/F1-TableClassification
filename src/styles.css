@@ -4,6 +4,13 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s; /* Suaviza a transição entre os modos */
+}
+
+body.dark-mode {
+  background-color: #121212; /* Fundo escuro */
+  color: #ffffff; /* Texto claro */
 }
 
 .App {
@@ -13,6 +20,10 @@ body {
 
 h1, h2 {
   color: #333;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+  color: #ffffff;
 }
 
 h1 {
@@ -30,10 +41,18 @@ p {
   color: #666;
 }
 
+body.dark-mode p {
+  color: #cccccc;
+}
+
 /* Navbar */
 .navbar {
   background-color: #333;
   padding: 10px;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
 }
 
 .navbar ul {
@@ -54,8 +73,36 @@ p {
   font-size: 18px;
 }
 
+body.dark-mode .navbar a {
+  color: #cccccc;
+}
+
 .navbar a:hover {
   text-decoration: underline;
+}
+
+/* Botão de Dark Mode */
+.dark-mode-button {
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-button:hover {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .dark-mode-button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark-mode .dark-mode-button:hover {
+  background-color: #333333;
 }
 
 /* Cards de classificação */
@@ -76,6 +123,13 @@ p {
   max-width: 600px;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .driver-card, body.dark-mode .race-card {
+  background-color: #1e1e1e;
+  border-color: #333333;
+  color: #ffffff;
 }
 
 /* Calendário de corridas */
@@ -97,10 +151,18 @@ p {
   font-weight: bold;
 }
 
+body.dark-mode .race-card a {
+  color: #66ccff;
+}
+
 .race-card a.disabled {
   color: #aaa;
   pointer-events: none;
   font-style: italic;
+}
+
+body.dark-mode .race-card a.disabled {
+  color: #555555;
 }
 
 .race-card a:hover {
@@ -116,11 +178,13 @@ p {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.details-container h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+body.dark-mode .details-container {
+  background-color: #1e1e1e;
+  border-color: #333333;
+  color: #ffffff;
 }
 
 .result-item {
@@ -128,6 +192,10 @@ p {
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
+}
+
+body.dark-mode .result-item {
+  border-bottom: 1px solid #555555;
 }
 
 .result-item:last-child {
@@ -138,66 +206,30 @@ p {
   font-weight: bold;
 }
 
-.details-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+body.dark-mode .result-item span {
+  color: #cccccc;
 }
 
-.race-title {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.race-date, .race-location {
-  margin: 10px 0;
-  font-size: 1rem;
-}
-
-.results-list {
-  margin-top: 20px;
-}
-
-.result-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 5px 0;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.position {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.driver {
-  flex: 1;
-  margin: 0 10px;
-}
-
-.points {
-  font-weight: bold;
-  color: #007bff;
-}
-
+/* Loading e Mensagem de erro */
 .loading, .error-message {
   text-align: center;
   color: #666;
   margin: 20px 0;
 }
 
+body.dark-mode .loading {
+  color: #cccccc;
+}
+
 .error-message {
   color: #ff0000;
 }
 
+body.dark-mode .error-message {
+  color: #ff6666;
+}
+
+/* Equipe */
 .team-card {
   display: flex;
   align-items: center;
@@ -207,11 +239,21 @@ p {
   margin: 10px 0;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .team-card {
+  background-color: #1e1e1e;
+  border-color: #333333;
 }
 
 .team-card .position {
   font-weight: bold;
   margin-right: 15px;
+}
+
+body.dark-mode .team-card .position {
+  color: #cccccc;
 }
 
 .team-card .team-logo {
@@ -232,15 +274,6 @@ p {
   color: #333;
 }
 
-.no-logo {
-  width: 40px;
-  height: 40px;
-  background-color: #ccc;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  margin-right: 15px;
-  color: #fff;
+body.dark-mode .team-card .team-points {
+  color: #cccccc;
 }

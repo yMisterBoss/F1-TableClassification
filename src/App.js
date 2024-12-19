@@ -9,7 +9,7 @@ import './styles.css';
 
 function App() {
   const audioRef = useRef(null);
-
+  
   useEffect(() => {
     // Tentar tocar o áudio após interação do usuário
     const handleUserInteraction = () => {
