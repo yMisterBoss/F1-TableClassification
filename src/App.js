@@ -10,7 +10,7 @@ import './styles.css';
 function App() {
   const audioRef = useRef(null);
   
-  useEffect(() => {
+ /*  useEffect(() => {
     // Tentar tocar o áudio após interação do usuário
     const handleUserInteraction = () => {
       if (audioRef.current) {
@@ -31,7 +31,7 @@ function App() {
       window.removeEventListener('click', handleUserInteraction);
       window.removeEventListener('scroll', handleUserInteraction);
     };
-  }, []);
+  }, []); */
 
   return (
     <Router>
